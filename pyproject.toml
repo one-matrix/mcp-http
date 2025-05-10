@@ -1,5 +1,5 @@
 [project]
-name = "http-mcp-server"
+name = "mcp-http"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-http-mcp-server = "http_mcp_server:main"
+mcp_http = "mcp_http:main"
 
 [build-system]
 requires = ["hatchling"]

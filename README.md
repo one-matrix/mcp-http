@@ -21,10 +21,10 @@ MCP Http Server is a Model Context Protocol (MCP) server implemented based on th
 #### Clone the project
 
 ```bash
-git clone https://github.com/your-username/mcp-http-server.git
+git clone https://github.com/one-matrix/mcp-http.git
 cd mcp-http-server
 ```
-> Please replace `your-username` with the actual username or project URL.
+> Please replace `one-matrix` with the actual username or project URL.
 
 #### Install dependencies
 
@@ -101,7 +101,7 @@ Add the following configuration to your `claude_desktop_config.json` file:
       "command": "uv",
       "args": [
         "--directory",
-        "parent_of_servers_repo/mcp-http-server", // Replace with the path to the parent directory of the mcp-http-server project
+        "one-matrix/mcp-http", // Replace with the path to the parent directory of the mcp-http-server project
         "run",
         "server.py" // Replace with the actual server startup script
       ]

@@ -5,7 +5,7 @@ from pydantic import Field, HttpUrl
 import httpx
 from contextlib import asynccontextmanager
 from typing import Optional, Dict, Any
-from config import security_config
+# from src.mcp_http.config import security_config
 import logging
 # Reuse connection pool (performance optimization)
 @asynccontextmanager
@@ -24,9 +24,9 @@ mcp = FastMCP("HTTPProxyService", instructions="Integrated HTTP proxy service su
 def _validate_domain(url: str):
     """Domain whitelist validation"""
     return
-    domain = url.split("//")[-1].split("/")[0]
-    if domain not in security_config.allowed_domains:
-        raise ValueError(f"Access to domain is forbidden: {domain}")
+    # domain = url.split("//")[-1].split("/")[0]
+    # if domain not in security_config.allowed_domains:
+    #     raise ValueError(f"Access to domain is forbidden: {domain}")
 
 @mcp.tool(name="http_get", description="Execute GET request")
 async def http_get(
@@ -75,8 +75,8 @@ async def http_put(
 @mcp.tool(name="http_delete", description="Execute DELETE request")
 async def http_delete(
     ctx: Context,
-    params: Optional[Dict[str, Any]] = Field(default=None, description="URL query parameters"),
     url: str = Field(...),
+    params: Optional[Dict[str, Any]] = Field(default=None, description="URL query parameters"),
 ) -> str:
     _validate_domain(url)
     client = ctx.request_context.lifespan_context["client"]

@@ -93,21 +93,6 @@ wheels = [
 ]
 
 [[package]]
-name = "http-mcp-server"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "fastmcp" },
-    { name = "httpx" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastmcp", extras = ["cli"], specifier = ">=2.3.1" },
-    { name = "httpx", specifier = ">=0.28.1" },
-]
-
-[[package]]
 name = "httpcore"
 version = "1.0.9"
 source = { registry = "https://pypi.org/simple" }
@@ -183,6 +168,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ff/97/0a3e08559557b0ac5799f9fb535fbe5a4e4dcdd66ce9d32e7a74b4d0534d/mcp-1.8.0.tar.gz", hash = "sha256:263dfb700540b726c093f0c3e043f66aded0730d0b51f04eb0a3eb90055fe49b", size = 264641, upload-time = "2025-05-08T20:09:06.255Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b2/b2/4ac3bd17b1fdd65658f18de4eb0c703517ee0b483dc5f56467802a9197e0/mcp-1.8.0-py3-none-any.whl", hash = "sha256:889d9d3b4f12b7da59e7a3933a0acadae1fce498bfcd220defb590aa291a1334", size = 119544, upload-time = "2025-05-08T20:09:04.458Z" },
+]
+
+[[package]]
+name = "mcp-http"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "fastmcp" },
+    { name = "httpx" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastmcp", extras = ["cli"], specifier = ">=2.3.1" },
+    { name = "httpx", specifier = ">=0.28.1" },
 ]
 
 [[package]]
