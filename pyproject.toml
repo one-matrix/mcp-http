@@ -1,0 +1,20 @@
+[project]
+name = "http-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Admin", email = "lighttomorrow2012@hotmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp[cli]>=2.3.1",
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+http-mcp-server = "http_mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
