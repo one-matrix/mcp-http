@@ -100,15 +100,47 @@ Add the following configuration to your `claude_desktop_config.json` file:
     "mcp-httpx": {
       "command": "uv",
       "args": [
-        "--directory",
-        "one-matrix/mcp-http", // Replace with the path to the parent directory of the mcp-http-server project
+        "--from",
+        "git+https://github.com/one-matrix/mcp-http", // Replace with the path to the parent directory of the mcp-http-server project
         "run",
-        "server.py" // Replace with the actual server startup script
+        "mcp-http" // Replace with the actual server startup script
       ]
     }
   }
 }
 ```
+
+or you can install :  uv pip install mcp-http
+
+{
+  "mcpServers": {
+    "mcp-httpx": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/one-matrix/mcp-http", 
+        "mcp-http" 
+      ]
+    }
+  }
+}
+
+
+{
+  "mcpServers": {
+    "mcp-httpx": {
+      "command": "uv",
+      "args": [
+        "run",
+        "-m",
+        "mcp_http"
+      ]
+    }
+  }
+}
+
+## Example
+![Cherry Studio Example](doc/CherryStudioExample.jpg)
 
 ## 📜 License
 

@@ -83,7 +83,8 @@ async def http_delete(
     response = await client.delete(url, params=params)
     return f"Status: {response.status_code}"
 def run():
-    mcp.run(transport='stdio',log_level="debug" )
+    mcp.run(transport='stdio')
+    #log_level="debug"
     #  mcp.run(
     #     transport="streamable-http",
     #     host="0.0.0.0",
