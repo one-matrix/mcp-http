@@ -11,8 +11,10 @@ mcp dev src/mcp_http/server.py
 
 delop:
 uv pip install wheel twine
+uv pip install build
+
 python -m build --wheel --outdir dist/
-twine upload dist/mcp_http-0.1.0-py3-none-any.whl
+twine upload dist/mcp_http-0.1.3-py3-none-any.whl
 
 cline
 {
