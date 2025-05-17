@@ -22,7 +22,7 @@ MCP Http Server is a Model Context Protocol (MCP) server implemented based on th
 
 ```bash
 git clone https://github.com/one-matrix/mcp-http.git
-cd mcp-http-server
+cd mcp-http
 ```
 > Please replace `one-matrix` with the actual username or project URL.
 
@@ -101,17 +101,15 @@ Add the following configuration to your `claude_desktop_config.json` file:
       "command": "uv",
       "args": [
         "--from",
-        "git+https://github.com/one-matrix/mcp-http", // Replace with the path to the parent directory of the mcp-http-server project
+        "git+https://github.com/one-matrix/mcp-http", 
         "run",
-        "mcp-http" // Replace with the actual server startup script
+        "mcp-http"
       ]
     }
   }
 }
 ```
-
-or you can install :  uv pip install mcp-http
-
+```json
 {
   "mcpServers": {
     "mcp-httpx": {
@@ -124,8 +122,11 @@ or you can install :  uv pip install mcp-http
     }
   }
 }
+```
 
+or you can install :  uv pip install mcp-http
 
+```json
 {
   "mcpServers": {
     "mcp-httpx": {
@@ -138,6 +139,8 @@ or you can install :  uv pip install mcp-http
     }
   }
 }
+```
+
 
 ## Example
 ![Cherry Studio Example](doc/CherryStudioExample.jpg)

@@ -65,3 +65,13 @@ uv pip install . --system
 uvx mcp-http
 
 uvx mcp_http
+
+
+issue
+uvx mcp_http
+/Users/LIYUAN/.cache/uv/archive-v0/TdzJUF32lUDlCjAsI5iUO/bin/mcp_http: line 2: realpath: command not found
+/Users/LIYUAN/.cache/uv/archive-v0/TdzJUF32lUDlCjAsI5iUO/bin/mcp_http: line 2: /Users/LIYUAN/Documents/Project/mcp-http/python: No such file or directory
+/Users/LIYUAN/.cache/uv/archive-v0/TdzJUF32lUDlCjAsI5iUO/bin/mcp_http: line 2: exec: /Users/LIYUAN/Documents/Project/mcp-http/python: cannot execute: No such file or directory
+
+fix
+mac： brew install coreutils
